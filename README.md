@@ -41,16 +41,16 @@ flowchart LR
 
 Setiap VM memiliki dua adapter: **NAT** (internet) dan **Host-only** (jaringan lab dan akses web Zabbix dari laptop).
 
-![Daftar VM di VirtualBox](docs/screenshots/01-virtualbox-vm-list.jpg)
-![Pengaturan adapter jaringan](docs/screenshots/02-network-adapters.jpg)
-![IP static pada NMS](docs/screenshots/03-ip-nms.jpg)
+![Daftar VM di VirtualBox](docs/screenshots/01-virtualbox-vm-list.jpeg)
+![Pengaturan adapter jaringan](docs/screenshots/02-network-adapters.jpeg)
+![IP static pada NMS](docs/screenshots/03-ip-nms.jpeg)
 
 ## Teknologi
 
 Oracle VirtualBox, Ubuntu Server 26.04 LTS, Docker dan Docker Compose, Zabbix 7.0 LTS, PostgreSQL 16, Zabbix Agent (paket `zabbix-agent` dari repositori Ubuntu), Nginx, MariaDB, Telegram Bot API.
 
-![Container Zabbix berjalan](docs/screenshots/04-docker-compose-ps.jpg)
-![Semua host hijau di Zabbix](docs/screenshots/05-hosts-semua-hijau.jpg)
+![Container Zabbix berjalan](docs/screenshots/04-docker-compose-ps.jpeg)
+![Semua host hijau di Zabbix](docs/screenshots/05-hosts-semua-hijau.jpeg)
 
 ## Yang dipantau
 
@@ -66,18 +66,18 @@ Oracle VirtualBox, Ubuntu Server 26.04 LTS, Docker dan Docker Compose, Zabbix 7.
 
 Catatan: ping dilakukan dari **NMS ke tiap VM**, bukan antar sesama VM.
 
-![Latest data ICMP](docs/screenshots/06-latest-data-icmp.jpg)
-![Item buatan sendiri](docs/screenshots/07-form-item.jpg)
-![Trigger buatan sendiri](docs/screenshots/08-form-trigger.jpg)
+![Latest data ICMP](docs/screenshots/06-latest-data-icmp.jpeg)
+![Item buatan sendiri](docs/screenshots/07-form-item.jpeg)
+![Trigger buatan sendiri](docs/screenshots/08-form-trigger.jpeg)
 
 ## Alert Telegram
 
 Alur: **Trigger → Action → Media type Telegram → Bot → HP**.
 Action memiliki syarat *severity Average atau lebih* supaya peringatan kecil tidak membanjiri notifikasi, dan memiliki *Recovery operation* sehingga pesan **Resolved** ikut terkirim.
 
-![Pesan Problem dan Resolved di Telegram](docs/screenshots/09-telegram-problem-resolved.jpg)
-![Action log berstatus Sent](docs/screenshots/10-action-log-sent.jpg)
-![Konfigurasi action](docs/screenshots/11-form-action.jpg)
+![Pesan Problem dan Resolved di Telegram](docs/screenshots/09-telegram-problem-resolved.jpeg)
+![Action log berstatus Sent](docs/screenshots/10-action-log-sent.jpeg)
+![Konfigurasi action](docs/screenshots/11-form-action.jpeg)
 
 ## Uji insiden
 
@@ -93,18 +93,18 @@ Waktu dalam WIB. Durasi adalah lama masalah terlihat oleh Zabbix. Waktu deteksi 
 | 6 | VM dimatikan (`poweroff`) | client-01 | 30 Okt 13:00:33 (ICMP) dan 13:01:44 (agent) | 01:07:33 | 7m | High dan Average | Telegram |
 | 7 | Beban CPU 4 menit | web-01 | 01:29:17 | 01:36:17 | 7m | High | Telegram |
 
-![Riwayat problem berstatus RESOLVED](docs/screenshots/12-problems-history-resolved.jpg)
-![Grafik ICMP loss client-01: 0% lalu 100% lalu kembali 0%](docs/screenshots/13-grafik-icmp-loss.jpg)
-![Pesan Telegram host down](docs/screenshots/14-telegram-icmp-down.jpg)
-![Grafik CPU web-01 saat uji beban](docs/screenshots/15-grafik-cpu.jpg)
-![Pesan Telegram CPU tinggi](docs/screenshots/16-telegram-high-cpu.jpg)
+![Riwayat problem berstatus RESOLVED](docs/screenshots/12-problems-history-resolved.jpeg)
+![Grafik ICMP loss client-01: 0% lalu 100% lalu kembali 0%](docs/screenshots/13-grafik-icmp-loss.jpeg)
+![Pesan Telegram host down](docs/screenshots/14-telegram-icmp-down.jpeg)
+![Grafik CPU web-01 saat uji beban](docs/screenshots/15-grafik-cpu.jpeg)
+![Pesan Telegram CPU tinggi](docs/screenshots/16-telegram-high-cpu.jpeg)
 
 ## Network map dan dashboard NOC
 
-![Network map saat normal](docs/screenshots/17-network-map-normal.jpg)
-![Network map saat ada insiden](docs/screenshots/18-network-map-insiden.jpg)
-![Dashboard NOC saat normal](docs/screenshots/19-dashboard-noc-normal.jpg)
-![Dashboard NOC saat ada insiden](docs/screenshots/20-dashboard-noc-insiden.jpg)
+![Network map saat normal](docs/screenshots/17-network-map-normal.jpeg)
+![Network map saat ada insiden](docs/screenshots/18-network-map-insiden.jpeg)
+![Dashboard NOC saat normal](docs/screenshots/19-dashboard-noc-normal.jpeg)
+![Dashboard NOC saat ada insiden](docs/screenshots/20-dashboard-noc-insiden.jpeg)
 
 ## Kendala dan solusi
 
