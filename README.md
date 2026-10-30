@@ -150,5 +150,4 @@ Waktu dalam WIB. Durasi adalah lama masalah terlihat oleh Zabbix. Waktu deteksi 
 - Laporan ketersediaan (SLA report) per host.
 
 ## Penulis
-
-Nama kamu: CAHAYA JAYA PRABASA| LinkedIn:https://www.linkedin.com/in/cahaya-jaya-prabasa | Email: cahayaprabasa@gmail.com
+CAHAYA JAYA PRABASA| LinkedIn:https://www.linkedin.com/in/cahaya-jaya-prabasa | Email: cahayaprabasa@gmail.com
